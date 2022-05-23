@@ -1,0 +1,622 @@
+[
+  {
+    "kind": "books#volume",
+    "id": "_U1KEAAAQBAJ",
+    "etag": "XWUEBQLBwzs",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/_U1KEAAAQBAJ",
+    "volumeInfo": {
+      "title": "Cytonic",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Skyward",
+      "publishedDate": "2021",
+      "description": "\"Interior illustrations by Ben McSweeney\"--Copyright page.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780399555855" },
+        { "type": "ISBN_10", "identifier": "0399555854" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 432,
+      "printType": "BOOK",
+      "categories": ["JUVENILE FICTION"],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.3.0.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=_U1KEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=_U1KEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=_U1KEAAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=1&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=_U1KEAAAQBAJ&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Cytonic.html?hl=&id=_U1KEAAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=_U1KEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "&quot;Interior illustrations by Ben McSweeney&quot;--Copyright page."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "QAxBEAAAQBAJ",
+    "etag": "a/K0zlwtCmw",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/QAxBEAAAQBAJ",
+    "volumeInfo": {
+      "title": "DARK ONE, BOOK 1",
+      "authors": ["Brandon Sanderson", "Jackson Lanzing", "Collin Kelly"],
+      "publisher": "Vault Comics",
+      "publishedDate": "2021-05-03",
+      "description": "From #1 New York Times Bestselling, Hugo Award-winning author, Brandon Sanderson, comes DARK ONE. Paul Tanasin is haunted by visions of a dark, fantastic world. A world called Mirandus. A world he must shatter. SOME WORLD'S ARE MADE TO BE BROKEN. From #1 New York Times Bestselling, Hugo Award-winning author, Brandon Sanderson (THE MISTBORN TRILOGY, THE STORMLIGHT ARCHIVE series), along with Nathan Gooden, Jackson Lanzing, and Collin Kelly, comes DARK ONE, the first book in a series of original graphic novels from Vault Comics. Paul Tanasin is a young man haunted by visions of a dark and fantastic world—visions he initially believes are hallucinations. But when he discovers they are prophecies from Mirandus, a world in which he's destined to become a fearsome destroyer, he'll have to embrace the fear, rise up as the Dark One, and shatter everything. DARK ONE examines the dual roles we often take on in life-the ability to be a savior as well as a destroyer.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9781638490807" },
+        { "type": "ISBN_10", "identifier": "1638490805" }
+      ],
+      "readingModes": { "text": true, "image": true },
+      "pageCount": 224,
+      "printType": "BOOK",
+      "categories": ["Comics & Graphic Novels"],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "1.1.1.0.preview.3",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=QAxBEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=QAxBEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=QAxBEAAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=2&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=QAxBEAAAQBAJ&source=gbs_api",
+      "canonicalVolumeLink": "https://play.google.com/store/books/details?id=QAxBEAAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": { "amount": 19.99, "currencyCode": "USD" },
+      "retailPrice": { "amount": 19.99, "currencyCode": "USD" },
+      "buyLink": "https://play.google.com/store/books/details?id=QAxBEAAAQBAJ&rdid=book-QAxBEAAAQBAJ&rdot=1&source=gbs_api",
+      "offers": [
+        {
+          "finskyOfferType": 1,
+          "listPrice": { "amountInMicros": 19990000, "currencyCode": "USD" },
+          "retailPrice": { "amountInMicros": 19990000, "currencyCode": "USD" },
+          "giftable": true
+        }
+      ]
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": true },
+      "pdf": { "isAvailable": true },
+      "webReaderLink": "http://play.google.com/books/reader?id=QAxBEAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "From #1 New York Times Bestselling, Hugo Award-winning author, Brandon Sanderson (THE MISTBORN TRILOGY, THE STORMLIGHT ARCHIVE series), along with Nathan Gooden, Jackson Lanzing, and Collin Kelly, comes DARK ONE, the first book in a series ..."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "5pRLDwAAQBAJ",
+    "etag": "caSvytxnny0",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/5pRLDwAAQBAJ",
+    "volumeInfo": {
+      "title": "Brandon Sanderson's White Sand Vol. 2",
+      "authors": ["Brandon Sanderson", "Rik Hoskin"],
+      "publisher": "Dynamite Entertainment",
+      "publishedDate": "2018-02-21",
+      "description": "Following the loss of most of his colleagues in a violent ambush, Kenton has become Lord Mastrell of the few remaining Sand Masters, magicians who can manipulate sand to do their bidding. With the ruling council poised against him, the hot-headed Kenton must become a diplomat to have any hope of preventing the eradication of his people forever. However, there’s another complication: assassins are coming for him from all directions, and Kenton’s only true ally is Khriss, a visitor from the other side of the planet who has an agenda of her own to pursue. White Sand Volume 2 continues the New York Times bestselling series of graphic novels, bringing a crucial chapter of Brandon Sanderson’s Cosmere to life exclusively in a visual format.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9781524103453" },
+        { "type": "ISBN_10", "identifier": "1524103454" }
+      ],
+      "readingModes": { "text": false, "image": true },
+      "pageCount": 153,
+      "printType": "BOOK",
+      "categories": ["Comics & Graphic Novels"],
+      "averageRating": 3.5,
+      "ratingsCount": 3,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "preview-1.0.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": true,
+        "imageBubbleVersion": "744838d1b7abd394"
+      },
+      "comicsContent": true,
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=5pRLDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=5pRLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=5pRLDwAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=3&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=5pRLDwAAQBAJ&source=gbs_api",
+      "canonicalVolumeLink": "https://play.google.com/store/books/details?id=5pRLDwAAQBAJ",
+      "seriesInfo": {
+        "kind": "books#volume_series_info",
+        "bookDisplayNumber": "2",
+        "volumeSeries": [
+          {
+            "seriesId": "He4pGwAAABA19M",
+            "seriesBookType": "COLLECTED_EDITION",
+            "orderNumber": 2
+          }
+        ]
+      }
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": { "amount": 24.99, "currencyCode": "USD" },
+      "retailPrice": { "amount": 24.99, "currencyCode": "USD" },
+      "buyLink": "https://play.google.com/store/books/details?id=5pRLDwAAQBAJ&rdid=book-5pRLDwAAQBAJ&rdot=1&source=gbs_api",
+      "offers": [
+        {
+          "finskyOfferType": 1,
+          "listPrice": { "amountInMicros": 24990000, "currencyCode": "USD" },
+          "retailPrice": { "amountInMicros": 24990000, "currencyCode": "USD" },
+          "giftable": true
+        }
+      ]
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/Brandon_Sanderson_s_White_Sand_Vol_2-sample-pdf.acsm?id=5pRLDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=5pRLDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "White Sand Volume 2 continues the New York Times bestselling series of graphic novels, bringing a crucial chapter of Brandon Sanderson’s Cosmere to life exclusively in a visual format."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "w_GEcHMVuWQC",
+    "etag": "XQf9NpbYaWQ",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/w_GEcHMVuWQC",
+    "volumeInfo": {
+      "title": "The Rithmatist",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Macmillan",
+      "publishedDate": "2013-05-14",
+      "description": "As Wild Chalklings threaten the American Isles and Rithmatists are humanity's only defense, Joel can only watch as Rithmatist students learn the magical art that he would do anything to practice.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780765320322" },
+        { "type": "ISBN_10", "identifier": "0765320320" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 384,
+      "printType": "BOOK",
+      "categories": ["Juvenile Fiction"],
+      "averageRating": 4,
+      "ratingsCount": 53,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.1.0.0.preview.0",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=w_GEcHMVuWQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=w_GEcHMVuWQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=w_GEcHMVuWQC&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=4&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=w_GEcHMVuWQC&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/The_Rithmatist.html?hl=&id=w_GEcHMVuWQC"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=w_GEcHMVuWQC&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "The best-selling successor of Robert Jordan&#39;s Wheel of Time series presents the story of a young chalkmaker&#39;s son who longs to join the ranks of future Rithmatists capable of infusing life into Chalking figures that protect humanity from ..."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "hWWGvgAACAAJ",
+    "etag": "lncAusS2paw",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/hWWGvgAACAAJ",
+    "volumeInfo": {
+      "title": "Sport Pyschology",
+      "authors": [
+        "Catherine Sanderson",
+        "Manwell Family Professor of Life Sciences Catherine Sanderson"
+      ],
+      "publisher": "Oxford University Press, USA",
+      "publishedDate": "2016-11-15",
+      "description": "This book is a comprehensive review of key theories and current research in sport psychology presented in a streamlined 13 chapter format with an engaging narrative. It emphasizes the science underlying the field of sport psychology, and includes research in action boxes and focus onneuroscience boxes in every chapter. Each chapter starts with a real world contemporary example and includes pictures and specific quotes from modern day athletes. Chapter 9 covers all types of prejudice and discrimination in sport including gender, race, and sexual orientation. The book has a testyourself feature in each chapter connecting sport to student's lives (students can rate themselves on issues such as burnout, perfectionism, disordered eating). The book also includes information relating to youth sport with boxes in every chapter called Impact on Youth.",
+      "industryIdentifiers": [
+        { "type": "ISBN_10", "identifier": "0199917442" },
+        { "type": "ISBN_13", "identifier": "9780199917440" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 448,
+      "printType": "BOOK",
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "preview-1.0.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=hWWGvgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=hWWGvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=hWWGvgAACAAJ&dq=inauthor:Sanderson&hl=&cd=5&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=hWWGvgAACAAJ&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Sport_Pyschology.html?hl=&id=hWWGvgAACAAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=hWWGvgAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "FEATURES *Emphasis on real-world examples and contemporary athletes in every chapter *Connects to students on a personal level through &quot;Test Yourself&quot; features that enable students to rate themselves on various issues, attitudes, and ..."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "RzIuCwAAQBAJ",
+    "etag": "nFOSHQtiNWA",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/RzIuCwAAQBAJ",
+    "volumeInfo": {
+      "title": "Alcatraz Vs. the Evil Librarians",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Macmillan",
+      "publishedDate": "2016-02-16",
+      "description": "On his thirteenth birthday, foster child Alcatraz Smedry receives a bag of sand which is immediately stolen by the evil Librarians who are trying to take over the world, and Alcatraz is introduced to his grandfather and his own special talent, and told that he must use it to save civilization.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780765378941" },
+        { "type": "ISBN_10", "identifier": "0765378949" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 320,
+      "printType": "BOOK",
+      "categories": ["Juvenile Fiction"],
+      "averageRating": 3,
+      "ratingsCount": 72,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.1.0.0.preview.0",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=RzIuCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=RzIuCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=RzIuCwAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=6&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=RzIuCwAAQBAJ&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Alcatraz_Vs_the_Evil_Librarians.html?hl=&id=RzIuCwAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=RzIuCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "New deluxe hardcover editions of the Alcatraz Versus the Evil Librarians middle-grade series from #1 New York Times bestselling author Brandon Sanderson"
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "A5RteM-rsycC",
+    "etag": "J5CP6zUQkYE",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/A5RteM-rsycC",
+    "volumeInfo": {
+      "title": "Warbreaker",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Macmillan",
+      "publishedDate": "2009-06-09",
+      "description": "After bursting onto the fantasy scene with his acclaimed debut novel, Elantris, and following up with his blockbuster Mistborn trilogy, Brandon Sanderson proves again that he is today's leading master of what Tolkien called “secondary creation,” the invention of whole worlds, complete with magics and myths all their own. Warbreaker is the story of two sisters, who happen to be princesses, the God King one of them has to marry, the lesser god who doesn't like his job, and the immortal who's still trying to undo the mistakes he made hundreds of years ago. Their world is one in which those who die in glory return as gods to live confined to a pantheon in Hallandren's capital city and where a power known as BioChromatic magic is based on an essence known as breath that can only be collected one unit at a time from individual people. By using breath and drawing upon the color in everyday objects, all manner of miracles and mischief can be accomplished. It will take considerable quantities of each to resolve all the challenges facing Vivenna and Siri, princesses of Idris; Susebron the God King; Lightsong, reluctant god of bravery, and mysterious Vasher, the Warbreaker.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780765320308" },
+        { "type": "ISBN_10", "identifier": "0765320304" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 592,
+      "printType": "BOOK",
+      "categories": ["Fiction"],
+      "averageRating": 4,
+      "ratingsCount": 101,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "preview-1.0.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=A5RteM-rsycC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=A5RteM-rsycC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=A5RteM-rsycC&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=7&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=A5RteM-rsycC&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Warbreaker.html?hl=&id=A5RteM-rsycC"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=A5RteM-rsycC&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "He also succeeds at building a unique fantasy environment, in which color and &quot;Breath&quot; are the basis for magic. This series opener is essential reading for fantasy fans. Copyright Reed Business Information, a division of Reed Elsevier Inc."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "cZbQAgAAQBAJ",
+    "etag": "KOz+QSnfges",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/cZbQAgAAQBAJ",
+    "volumeInfo": {
+      "title": "Words of Radiance",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Macmillan",
+      "publishedDate": "2014-03-04",
+      "description": "Dalinar leads the human armies into an escalating war with the Parshendi, while Shallan and Jasnah search for a mythical city to secure humanity's survival, and Kaladin struggles to master his Windrunner powers.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780765326362" },
+        { "type": "ISBN_10", "identifier": "0765326361" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 1087,
+      "printType": "BOOK",
+      "categories": ["Fiction"],
+      "averageRating": 5,
+      "ratingsCount": 2,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.1.0.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=cZbQAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=cZbQAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=cZbQAgAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=8&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=cZbQAgAAQBAJ&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Words_of_Radiance.html?hl=&id=cZbQAgAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=cZbQAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "Dalinar leads the human armies into an escalating war with the Parshendi, while Shallan and Jasnah search for a mythical city to secure humanity&#39;s survival, and Kaladin struggles to master his Windrunner powers."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "RPq0DwAAQBAJ",
+    "etag": "ry05c8XXj0c",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/RPq0DwAAQBAJ",
+    "volumeInfo": {
+      "title": "Skyward",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Delacorte Press",
+      "publishedDate": "2019",
+      "description": "When a long-term attack against her world by the alien Krell escalates, Spensa's dream of becoming a pilot may come true, despite her deceased father being labeled a deserter.",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780399555800" },
+        { "type": "ISBN_10", "identifier": "0399555803" }
+      ],
+      "readingModes": { "text": false, "image": false },
+      "pageCount": 544,
+      "printType": "BOOK",
+      "categories": ["Young Adult Fiction"],
+      "averageRating": 4,
+      "ratingsCount": 20,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.1.0.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=RPq0DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=RPq0DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=RPq0DwAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=9&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=RPq0DwAAQBAJ&dq=inauthor:Sanderson&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Skyward.html?hl=&id=RPq0DwAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": { "isAvailable": false },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=RPq0DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "When a long-term attack against her world by the alien Krell escalates, Spensa&#39;s dream of becoming a pilot may come true, despite her deceased father being labeled a deserter."
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "QMAaAgAAQBAJ",
+    "etag": "pw0cYpgKeOc",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/QMAaAgAAQBAJ",
+    "volumeInfo": {
+      "title": "Mitosis: A Reckoners Story",
+      "authors": ["Brandon Sanderson"],
+      "publisher": "Delacorte Press",
+      "publishedDate": "2013-12-03",
+      "description": "Read the e-novella from the #1 New York Times bestselling Recokners series: Steelheart, Firefight, and Calamity! Brandon Sanderson, the #1 New York Times bestselling author of Words of Radiance, coauthor of Robert Jordan’s The Wheel of Time series, and creator of the internationally bestselling Mistborn trilogy, presents Mitosis, a short story set in the action-packed world of Steelheart, Firefight, and Calamity: the Reckoners series, exclusively available in the digital format. Epics still plague Newcago, but David and the Reckoners have vowed to fight back. Praise for the Reckoners Series: #1 New York Times Bestselling Series “Another win for Sanderson . . . he’s simply a brilliant writer. Period.” —Patrick Rothfuss, author of the New York Times and USA Today bestseller The Name of the Wind “Action-packed.” —EW.com “Compelling. . . . Sanderson uses plot twists that he teases enough for readers to pick up on to distract from the more dramatic reveals he has in store.” —The A.V. Club",
+      "industryIdentifiers": [
+        { "type": "ISBN_13", "identifier": "9780449818435" },
+        { "type": "ISBN_10", "identifier": "0449818438" }
+      ],
+      "readingModes": { "text": true, "image": false },
+      "pageCount": 15,
+      "printType": "BOOK",
+      "categories": ["Young Adult Fiction"],
+      "averageRating": 3.5,
+      "ratingsCount": 22,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "0.4.5.0.preview.2",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=QMAaAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=QMAaAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=QMAaAgAAQBAJ&printsec=frontcover&dq=inauthor:Sanderson&hl=&cd=10&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=QMAaAgAAQBAJ&source=gbs_api",
+      "canonicalVolumeLink": "https://play.google.com/store/books/details?id=QMAaAgAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": { "amount": 1.99, "currencyCode": "USD" },
+      "retailPrice": { "amount": 1.99, "currencyCode": "USD" },
+      "buyLink": "https://play.google.com/store/books/details?id=QMAaAgAAQBAJ&rdid=book-QMAaAgAAQBAJ&rdot=1&source=gbs_api",
+      "offers": [
+        {
+          "finskyOfferType": 1,
+          "listPrice": { "amountInMicros": 1990000, "currencyCode": "USD" },
+          "retailPrice": { "amountInMicros": 1990000, "currencyCode": "USD" },
+          "giftable": true
+        }
+      ]
+    },
+    "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com/books/download/Mitosis_A_Reckoners_Story-sample-epub.acsm?id=QMAaAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "pdf": { "isAvailable": false },
+      "webReaderLink": "http://play.google.com/books/reader?id=QMAaAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "Brandon Sanderson, the #1 New York Times bestselling author of Words of Radiance, coauthor of Robert Jordan’s The Wheel of Time series, and creator of the internationally bestselling Mistborn trilogy, presents Mitosis, a short story set ..."
+    }
+  }
+]

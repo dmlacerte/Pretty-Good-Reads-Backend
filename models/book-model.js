@@ -8,13 +8,28 @@ const BookSchema = new mongoose.Schema(
             required: true,
             trim: true 
         },
-        author: {
-            type: String,
+        authors: {
+            type: [{type: String}],
             required: true
         },
-        genres: [{type: String}],
-        tags: [{type: String}],
-        ratings: [{type: ObjectId, ref: 'Rating'}]
+        publisher: String,
+        publishedDate: String,
+        description: String,
+        industryIdentifiers: [{type: Object}],
+        readingModes: Object,
+        pageCount: Number,
+        printType: String,
+        categories: [{type: String}],
+        ratings: [{type: ObjectId, ref: 'Rating'}],
+        maturityRating: String,
+        allowAnonLogging: Boolean,
+        contentVersion: String,
+        panelizationSummary: Object,
+        imageLinks: {smallThumbnail: {type:String}, thumbnail: {type:String}},
+        language: String,
+        previewLink: String,
+        infoLink: String,
+        canonicalVolumeLink: String
     },
     {timestamps: true}
 )
