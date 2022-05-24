@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "628d15686e8da9eeb8503256",
+        "name": "Phillip",
+        "googleId": "107263231567746628699",
+        "wishlist": ["628bfbc7497834c3e40990dd"],
+        "reading": ["628bfbc7497834c3e40990dc"],
+        "finished": ["628bfbc7497834c3e40990e3"]
+    },
+    {
+        "_id": "628d15686e8da9eeb8503257",
+        "name": "Deanna Lacerte",
+        "googleId": "118310985229081930840",
+        "wishlist": ["628bfbc7497834c3e40990df"],
+        "reading": ["628bfbc7497834c3e40990e2"],
+        "finished": ["628bfbc7497834c3e40990e4"]
+    }
+]

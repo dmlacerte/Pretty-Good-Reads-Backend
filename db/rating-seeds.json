@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "628d17ece15daf55621e796d",
+        "book": "628bfbc7497834c3e40990e3",
+        "user": "628d15686e8da9eeb8503256",
+        "score": "5"
+    },
+    {
+        "_id": "628d17ece15daf55621e796e",
+        "book": "628bfbc7497834c3e40990e3",
+        "user": "628d15686e8da9eeb8503257",
+        "score": "2"
+    },
+    {
+        "_id": "628d17ece15daf55621e796f",
+        "book": "628bfbc7497834c3e40990dd",
+        "user": "628d15686e8da9eeb8503257",
+        "score": "4"
+    },
+    {
+        "_id": "628d17ece15daf55621e7970",
+        "book": "628bfbc7497834c3e40990e0",
+        "user": "628d15686e8da9eeb8503257",
+        "score": "3"
+    }
+]
