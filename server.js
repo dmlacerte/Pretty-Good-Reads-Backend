@@ -8,9 +8,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 const bookControllers = require('./controllers/bookControllers')
+const ratingControllers = require('./controllers/ratingControllers')
 
 
 app.use('/book', bookControllers)
+app.use('/rate', ratingControllers)
 app.use('/node_modules', express.static(__dirname + '/node_modules'))
 
 
