@@ -7,6 +7,12 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+const bookControllers = require('./controllers/bookControllers')
+
+
+app.use('/book', bookControllers)
+app.use('/node_modules', express.static(__dirname + '/node_modules'))
+
 
 app.get('/', (req, res) => {
     res.send('<h1>we in</h1>')
