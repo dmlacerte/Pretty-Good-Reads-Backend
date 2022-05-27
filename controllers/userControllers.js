@@ -33,4 +33,10 @@ router.post('/api/v1/auth/google', async (req, res) => {
     res.json({ user, token });
 })
 
+router.get('/userBooks/:id', (req, res) => {
+    User.findOne({"googleId" : req.params.id})
+        .then(user => res.json(user))
+        .catch(console.error)
+})
+
 module.exports = router
