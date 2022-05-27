@@ -3,7 +3,7 @@ const router = express.Router()
 const axios = require('axios')
 
 const Book = require('../models/book-model')
-
+const User = require('../models/user-model')
 
 router.get('/:id', (req, res) => {
     Book.findById(req.params.id)
@@ -13,6 +13,21 @@ router.get('/:id', (req, res) => {
         res.json(book)
     })
     .catch(console.error)
+})
+
+//GET books associated with an individual user account
+router.get("/user/:userId", async (req, res) => {
+    const user = await User.findOne({"googleId" : req.params.userId});
+
+    const wishlist = await Book.find({ "_id" : { $in: user.wishlist } })
+    const reading = await Book.find({ "_id" : { $in: user.reading } })
+    const finished = await Book.find({ "_id" : { $in: user.finished } })
+    
+    res.send({
+        wishlist,
+        reading,
+        finished
+    });
 })
 
 router.post('/post', (req, res) => {

@@ -19,10 +19,10 @@ for(let i = 0; i < bookSeeds.length; i++) {
     seedBooks.push(bookSeeds[i].volumeInfo)
 }
     
-Book.deleteMany({})
-    .then(() => Book.create(seedBooks))
-    .then(element => console.log(`Entered ${element.length} Books`))  
-    .catch(console.error)
+// Book.deleteMany({})
+//     .then(() => Book.create(seedBooks))
+//     .then(element => console.log(`Entered ${element.length} Books`))  
+//     .catch(console.error)
 
 User.deleteMany({})
     .then(() => User.create(userSeeds))
