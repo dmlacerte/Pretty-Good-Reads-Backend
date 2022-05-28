@@ -5,15 +5,6 @@ const axios = require('axios')
 const Book = require('../models/book-model')
 const User = require('../models/user-model')
 
-router.get('/:id', (req, res) => {
-    Book.findById(req.params.id)
-    .then(book => {
-        //if (book) send it back
-        //else search API
-        res.json(book)
-    })
-    .catch(console.error)
-})
 
 //GET books associated with an individual user account
 router.get("/user/:userId", async (req, res) => {
@@ -28,6 +19,16 @@ router.get("/user/:userId", async (req, res) => {
         reading,
         finished
     });
+})
+
+router.get('/:id', (req, res) => {
+    Book.findById(req.params.id)
+    .then(book => {
+        //if (book) send it back
+        //else search API
+        res.json(book)
+    })
+    .catch(console.error)
 })
 
 router.post('/post', (req, res) => {
