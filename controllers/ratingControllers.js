@@ -16,6 +16,12 @@ router.get('/user/:id', (req, res) => {
     .catch(console.error)
 })
 
+router.get('/:userId/:bookId', (req, res) => {
+    Rating.findOne({user: req.params.userId, book: req.params.bookId})
+    .then(rating => res.json(rating))
+    .catch(console.error)
+})
+
 router.post('/post', (req, res) => {
     Rating.create(req.body)
     .then(rating => res.send(rating))
