@@ -10,7 +10,7 @@ const ratingSeeds = require('./rating-seeds.json')
 
 
 //Getting sample books (only need to run once)
-// axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:Sanderson&key=${process.env.API_KEY}`)
+// axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:Sanderson&key=${process.env.REACT_APP_API_KEY}`)
 //     .then(res => {FileSystem.writeFile('./db/book-seeds.json', JSON.stringify(res.data.items), err => console.error)})
 //     .catch(console.error)
 
