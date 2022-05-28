@@ -14,15 +14,11 @@ const ratingSeeds = require('./rating-seeds.json')
 //     .then(res => {FileSystem.writeFile('./db/book-seeds.json', JSON.stringify(res.data.items), err => console.error)})
 //     .catch(console.error)
 
-let seedBooks = []
-for(let i = 0; i < bookSeeds.length; i++) {
-    seedBooks.push(bookSeeds[i].volumeInfo)
-}
     
-// Book.deleteMany({})
-//     .then(() => Book.create(seedBooks))
-//     .then(element => console.log(`Entered ${element.length} Books`))  
-//     .catch(console.error)
+Book.deleteMany({})
+    .then(() => Book.create(bookSeeds))
+    .then(element => console.log(`Entered ${element.length} Books`))  
+    .catch(console.error)
 
 User.deleteMany({})
     .then(() => User.create(userSeeds))

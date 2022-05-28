@@ -22,11 +22,12 @@ router.get("/user/:userId", async (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    Book.findById(req.params.id)
+    Book.find({id: req.params.id})
     .then(book => {
         //if (book) send it back
         //else search API
-        res.json(book)
+        if (book.length === 0) res.json(null)
+        else res.json(book)
     })
     .catch(console.error)
 })
@@ -38,7 +39,7 @@ router.post('/post', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-    Book.findByIdAndUpdate(req.params.id, {
+    Book.findOneAndUpdate({id: req.params.id}, {
         $push: {ratings: req.body.rating}
     })
     .then(book => res.json(book))
@@ -46,7 +47,7 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    Book.findByIdAndDelete(req.params.id)
+    Book.findOneAndDelete({id: req.params.id})
     .then(book => res.json(book))
     .catch(console.error)
 })
