@@ -6,24 +6,34 @@ const client = new OAuth2Client(process.env.CLIENT_ID)
 
 const User = require('../models/user-model')
 
+const clearUserTokenAndDeauthenticate = (res) => {
+    res.clearCookie("token");
+    res.json({ authenticated: false, user: null});
+}
+
 router.get('/user/me', async (req, res) => {
     const { token } = req.cookies;
-    console.log(`TOKEN: ${token}`)
     if (token) {
-        const ticket = await client.verifyIdToken({
-            idToken: token,
-            audience: process.env.CLIENT_ID
-        });
-
-        console.log(`TICKET: ${JSON.stringify(ticket)}`)
-    
-        const payload = ticket.getPayload();
-    
-        let user = await User.findOne({ googleId: payload?.sub });
-        res.json({authenticated: true, user});
+        try {
+            const ticket = await client.verifyIdToken({
+                idToken: token,
+                audience: process.env.CLIENT_ID
+            });
+        
+            const payload = ticket.getPayload();
+        
+            let user = await User.findOne({ googleId: payload?.sub });
+            res.json({authenticated: true, user});
+        } catch (e) {
+            clearUserTokenAndDeauthenticate(res);
+        }
     } else {
-        res.json({ authenticated: false, user: null})
+        clearUserTokenAndDeauthenticate(res);
     }
+})
+
+router.get('/user/logout', (_, res) => {
+    clearUserTokenAndDeauthenticate(res);
 })
 
 router.post('/api/v1/auth/google', async (req, res) => {
@@ -50,14 +60,11 @@ router.post('/api/v1/auth/google', async (req, res) => {
         await user.save();
     }
 
-    console.log(user);
-    // req.session.userId = user.id;
-
     res.cookie("token", token, {
         httpOnly: true,
         secure: true
     });
-    res.json({ user, token });
+    res.json({ user });
 })
 
 router.get('/userBooks/:id', (req, res) => {
