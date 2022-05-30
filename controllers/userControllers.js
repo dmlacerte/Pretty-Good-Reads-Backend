@@ -7,12 +7,12 @@ const client = new OAuth2Client(process.env.CLIENT_ID)
 const User = require('../models/user-model')
 
 const clearUserTokenAndDeauthenticate = (res) => {
-    res.clearCookie("token");
-    res.json({ authenticated: false, user: null});
+    res.clearCookie("token")
+    res.json({ authenticated: false, user: null})
 }
 
 router.get('/user/me', async (req, res) => {
-    const { token } = req.cookies;
+    const { token } = req.cookies
     if (token) {
         try {
             const ticket = await client.verifyIdToken({
@@ -20,23 +20,19 @@ router.get('/user/me', async (req, res) => {
                 audience: process.env.CLIENT_ID
             });
         
-            const payload = ticket.getPayload();
+            const payload = ticket.getPayload()
         
-            let user = await User.findOne({ googleId: payload?.sub });
-            res.json({authenticated: true, user});
-        } catch (e) {
-            clearUserTokenAndDeauthenticate(res);
+            let user = await User.findOne({ googleId: payload?.sub })
+            res.json({authenticated: true, user})
+        } catch (err) {
+            clearUserTokenAndDeauthenticate(res)
         }
     } else {
-        clearUserTokenAndDeauthenticate(res);
+        clearUserTokenAndDeauthenticate(res)
     }
 })
 
-router.get('/user/logout', (_, res) => {
-    clearUserTokenAndDeauthenticate(res);
-})
-
-router.post('/api/v1/auth/google', async (req, res) => {
+router.post('/user/login', async (req, res) => {
     const { token } = req.body
     const ticket = await client.verifyIdToken({
         idToken: token,
@@ -57,14 +53,18 @@ router.post('/api/v1/auth/google', async (req, res) => {
             googleId: payload?.sub
         });
 
-        await user.save();
+        await user.save()
     }
 
     res.cookie("token", token, {
         httpOnly: true,
         secure: true
     });
-    res.json({ user });
+    res.json({ user })
+})
+
+router.get('/user/logout', (req, res) => {
+    clearUserTokenAndDeauthenticate(res)
 })
 
 router.get('/userBooks/:id', (req, res) => {
