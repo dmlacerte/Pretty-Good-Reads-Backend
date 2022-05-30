@@ -1,3 +1,4 @@
+const { query } = require('express')
 const express = require('express')
 const router = express.Router()
 
@@ -73,6 +74,22 @@ router.post('/user/login', async (req, res) => {
         secure: true
     });
     res.json({ user })
+})
+
+router.put('/user/updateList/', async (req, res) => {
+    const list = req.body.list
+    const userId = req.body.userId
+    const bookId = req.body.bookId
+
+    let query = {}
+    query[list] = bookId
+    console.log(query)
+    
+    await User.findByIdAndUpdate(userId, {$pull: {wishlist: bookId, reading: bookId, finished: bookId, }})
+
+    if (list !== 'notRead') {
+        await User.findByIdAndUpdate(userId, {$push: query})
+    }
 })
 
 module.exports = router
