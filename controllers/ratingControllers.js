@@ -16,15 +16,25 @@ router.get('/user/:id', (req, res) => {
     .catch(console.error)
 })
 
-router.post('/post', (req, res) => {
-    Rating.create(req.body)
+router.get('/:userId/:bookId', (req, res) => {
+    Rating.findOne({user: req.params.userId, book: req.params.bookId})
+    .then(rating => res.json(rating))
+    .catch(console.error)
+})
+
+router.post('/:userId/:bookId/:starRating', (req, res) => {
+    Rating.create({
+        user: req.params.userId,
+        book: req.params.bookId,
+        score: req.params.starRating
+    })
     .then(rating => res.send(rating))
     .catch(console.error)
 })
 
-router.put('/:id', (req, res) => {
-    Rating.findByIdAndUpdate(req.params.id, {
-        score: req.body.score
+router.put('/:userId/:bookId/:starRating', (req, res) => {
+    Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, {
+        score: req.params.starRating
     })
     .then(rating => res.send(rating))
     .catch(console.error)
