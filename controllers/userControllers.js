@@ -1,3 +1,4 @@
+const { query } = require('express')
 const express = require('express')
 const router = express.Router()
 
@@ -34,6 +35,16 @@ router.get('/user/me', async (req, res) => {
     }
 })
 
+router.get('/user/logout', (req, res) => {
+    clearUserTokenAndDeauthenticate(res)
+})
+
+router.get('/userBooks/:id', (req, res) => {
+    User.findOne({ "googleId": req.params.id })
+        .then(user => res.json(user))
+        .catch(console.error)
+})
+
 router.post('/user/login', async (req, res) => {
     const { token } = req.body
     const ticket = await client.verifyIdToken({
@@ -65,14 +76,20 @@ router.post('/user/login', async (req, res) => {
     res.json({ user })
 })
 
-router.get('/user/logout', (req, res) => {
-    clearUserTokenAndDeauthenticate(res)
-})
+router.put('/user/updateList/', async (req, res) => {
+    const list = req.body.list
+    const userId = req.body.userId
+    const bookId = req.body.bookId
 
-router.get('/userBooks/:id', (req, res) => {
-    User.findOne({ "googleId": req.params.id })
-        .then(user => res.json(user))
-        .catch(console.error)
+    let query = {}
+    query[list] = bookId
+    console.log(query)
+    
+    await User.findByIdAndUpdate(userId, {$pull: {wishlist: bookId, reading: bookId, finished: bookId, }})
+
+    if (list !== 'notRead') {
+        await User.findByIdAndUpdate(userId, {$push: query})
+    }
 })
 
 module.exports = router

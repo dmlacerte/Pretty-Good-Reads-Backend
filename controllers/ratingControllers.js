@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 const Rating = require('../models/rating-model')
+const User = require('../models/user-model')
+const Book = require('../models/book-model')
 
 
 router.get('/book/:id', (req, res) => {
@@ -26,15 +28,21 @@ router.post('/:userId/:bookId/:starRating', (req, res) => {
     Rating.create({
         user: req.params.userId,
         book: req.params.bookId,
-        score: req.params.starRating
+        score: parseInt(req.params.starRating)
     })
-    .then(rating => res.send(rating))
+    .then(async (rating) => {
+        console.log(`adding to book and user`)
+        console.log(rating)
+        await User.findByIdAndUpdate(req.params.userId, {$push: {ratings: rating._id}})
+        await Book.findByIdAndUpdate(req.params.bookId, {$push: {ratings: rating._id}})
+    })
+    .then(element => res.json(element))
     .catch(console.error)
 })
 
 router.put('/:userId/:bookId/:starRating', (req, res) => {
     Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, {
-        score: req.params.starRating
+        score: parseInt(req.params.starRating)
     })
     .then(rating => res.send(rating))
     .catch(console.error)
