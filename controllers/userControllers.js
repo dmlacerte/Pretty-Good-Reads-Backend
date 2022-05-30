@@ -23,6 +23,8 @@ router.get('/user/me', async (req, res) => {
             const payload = ticket.getPayload()
         
             let user = await User.findOne({ googleId: payload?.sub })
+            .populate('ratings')
+            .populate('wishlist')
             res.json({authenticated: true, user})
         } catch (err) {
             clearUserTokenAndDeauthenticate(res)
