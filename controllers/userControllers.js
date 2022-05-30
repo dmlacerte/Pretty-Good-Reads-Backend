@@ -34,6 +34,16 @@ router.get('/user/me', async (req, res) => {
     }
 })
 
+router.get('/user/logout', (req, res) => {
+    clearUserTokenAndDeauthenticate(res)
+})
+
+router.get('/userBooks/:id', (req, res) => {
+    User.findOne({ "googleId": req.params.id })
+        .then(user => res.json(user))
+        .catch(console.error)
+})
+
 router.post('/user/login', async (req, res) => {
     const { token } = req.body
     const ticket = await client.verifyIdToken({
@@ -63,16 +73,6 @@ router.post('/user/login', async (req, res) => {
         secure: true
     });
     res.json({ user })
-})
-
-router.get('/user/logout', (req, res) => {
-    clearUserTokenAndDeauthenticate(res)
-})
-
-router.get('/userBooks/:id', (req, res) => {
-    User.findOne({ "googleId": req.params.id })
-        .then(user => res.json(user))
-        .catch(console.error)
 })
 
 module.exports = router
