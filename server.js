@@ -13,6 +13,17 @@ app.use(cors({
     : process.env.REACT_APP_FRONT_END_DEV,
     credentials: true
 }))
+app.use(function(req, res, next) {
+    res.header({
+        "Access-Control-Allow-Origin": process.env.NODE_ENV === 'production'
+            ? process.env.REACT_APP_FRONT_END_PROD
+            : process.env.REACT_APP_FRONT_END_DEV,
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type, *"
+    });
+    next();
+});
 app.use(cookieParser())
 
 const bookControllers = require('./controllers/bookControllers')
