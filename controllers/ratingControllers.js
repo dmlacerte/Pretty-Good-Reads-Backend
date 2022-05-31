@@ -6,6 +6,7 @@ const Rating = require('../models/rating-model')
 
 router.get('/book/:id', (req, res) => {
     Rating.find({book: req.params.id})
+    .populate('user')
     .then(ratings => res.send(ratings))
     .catch(console.error)
 })
