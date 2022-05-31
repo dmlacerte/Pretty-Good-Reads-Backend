@@ -9,7 +9,7 @@ const User = require('../models/user-model')
 
 const clearUserTokenAndDeauthenticate = (res) => {
     res.clearCookie("token")
-    res.json({ authenticated: false, user: null})
+    res.json({ authenticated: false, user: null })
 }
 
 router.get('/user/me', async (req, res) => {
@@ -20,13 +20,13 @@ router.get('/user/me', async (req, res) => {
                 idToken: token,
                 audience: process.env.CLIENT_ID
             });
-        
+
             const payload = ticket.getPayload()
-        
+
             let user = await User.findOne({ googleId: payload?.sub })
-            .populate('ratings')
-            .populate('wishlist')
-            res.json({authenticated: true, user})
+                .populate('ratings')
+                .populate('wishlist')
+            res.json({ authenticated: true, user })
         } catch (err) {
             clearUserTokenAndDeauthenticate(res)
         }
@@ -71,7 +71,10 @@ router.post('/user/login', async (req, res) => {
 
     res.cookie("token", token, {
         httpOnly: true,
-        secure: true
+        secure: true,
+        domain: process.env.NODE_ENV === 'production'
+            ? 'pretty-good-reads.netlify.app'
+            : 'localhost'
     });
     res.json({ user })
 })
@@ -84,11 +87,11 @@ router.put('/user/updateList/', async (req, res) => {
     let query = {}
     query[list] = bookId
     console.log(query)
-    
-    await User.findByIdAndUpdate(userId, {$pull: {wishlist: bookId, reading: bookId, finished: bookId, }})
+
+    await User.findByIdAndUpdate(userId, { $pull: { wishlist: bookId, reading: bookId, finished: bookId, } })
 
     if (list !== 'notRead') {
-        await User.findByIdAndUpdate(userId, {$push: query})
+        await User.findByIdAndUpdate(userId, { $push: query })
     }
 })
 
