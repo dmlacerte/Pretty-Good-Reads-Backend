@@ -10,17 +10,13 @@ const ratingSeeds = require('./rating-seeds.json')
 
 
 //Getting sample books (only need to run once)
-// axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:Sanderson&key=${process.env.API_KEY}`)
+// axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:Sanderson&key=${process.env.REACT_APP_API_KEY}`)
 //     .then(res => {FileSystem.writeFile('./db/book-seeds.json', JSON.stringify(res.data.items), err => console.error)})
 //     .catch(console.error)
 
-let seedBooks = []
-for(let i = 0; i < bookSeeds.length; i++) {
-    seedBooks.push(bookSeeds[i].volumeInfo)
-}
     
 Book.deleteMany({})
-    .then(() => Book.create(seedBooks))
+    .then(() => Book.create(bookSeeds))
     .then(element => console.log(`Entered ${element.length} Books`))  
     .catch(console.error)
 

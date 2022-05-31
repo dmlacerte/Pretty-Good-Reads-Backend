@@ -7,7 +7,6 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true,
-            unique:true,
             index: { collation: {locale: 'en', strength:2 }}
         },
         avatar: String,
@@ -15,7 +14,10 @@ const UserSchema = new mongoose.Schema(
         reading: [{type: ObjectId, ref: 'Book'}],
         finished: [{type: ObjectId, ref: 'Book'}],
         ratings: [{type: ObjectId, ref: 'Rating'}],
-        googleId: String,
+        googleId: { 
+            type: String,
+            unique: true
+        }
         //might need it
         // email: {
         //     type: String,

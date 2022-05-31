@@ -58,6 +58,7 @@
   },
   {
     "_id": "628bfbc7497834c3e40990dd",
+    "ratings": ["628d17ece15daf55621e796f"],
     "kind": "books#volume",
     "id": "QAxBEAAAQBAJ",
     "etag": "a/K0zlwtCmw",
@@ -267,6 +268,7 @@
   },
   {
     "_id": "628bfbc7497834c3e40990e0",
+    "ratings": ["628d17ece15daf55621e7970"],
     "kind": "books#volume",
     "id": "hWWGvgAACAAJ",
     "etag": "lncAusS2paw",
@@ -440,6 +442,7 @@
   },
   {
     "_id": "628bfbc7497834c3e40990e3",
+    "ratings": ["628d17ece15daf55621e796e", "628d17ece15daf55621e796d"],
     "kind": "books#volume",
     "id": "cZbQAgAAQBAJ",
     "etag": "KOz+QSnfges",
