@@ -72,9 +72,10 @@ router.post('/user/login', async (req, res) => {
     res.cookie("token", token, {
         httpOnly: true,
         secure: true,
-        domain: process.env.NODE_ENV === 'production'
-            ? 'pretty-good-reads.netlify.app'
-            : 'localhost'
+        sameSite:'none'
+        // domain: process.env.NODE_ENV === 'production'
+        //     ? 'pretty-good-reads.netlify.app'
+        //     : 'localhost'
     });
     res.json({ user })
 })
