@@ -6,11 +6,13 @@ const client = new OAuth2Client(process.env.CLIENT_ID)
 
 const User = require('../models/user-model')
 
+//Helper function to log out a user and remove browser cookie
 const clearUserTokenAndDeauthenticate = (res) => {
     res.clearCookie("token")
     res.json({ authenticated: false, user: null })
 }
 
+//Authenticate and create new users, and set a browser cookie
 router.post('/user/login', async (req, res) => {
     const { token } = req.body
     const ticket = await client.verifyIdToken({
@@ -46,6 +48,7 @@ router.post('/user/login', async (req, res) => {
     res.json({ user })
 })
 
+//Set a user as authenticated if the browser passes back a cookie
 router.get('/user/me', async (req, res) => {
     const { token } = req.cookies
     if (token) {
@@ -69,6 +72,7 @@ router.get('/user/me', async (req, res) => {
     }
 })
 
+//Log a user out
 router.get('/user/logout', (req, res) => {
     clearUserTokenAndDeauthenticate(res)
 })
