@@ -1,4 +1,3 @@
-const { query } = require('express')
 const express = require('express')
 const router = express.Router()
 
@@ -11,39 +10,6 @@ const clearUserTokenAndDeauthenticate = (res) => {
     res.clearCookie("token")
     res.json({ authenticated: false, user: null })
 }
-
-router.get('/user/me', async (req, res) => {
-    const { token } = req.cookies
-    if (token) {
-        try {
-            const ticket = await client.verifyIdToken({
-                idToken: token,
-                audience: process.env.CLIENT_ID
-            });
-
-            const payload = ticket.getPayload()
-
-            let user = await User.findOne({ googleId: payload?.sub })
-                .populate('ratings')
-                .populate('wishlist')
-            res.json({ authenticated: true, user })
-        } catch (err) {
-            clearUserTokenAndDeauthenticate(res)
-        }
-    } else {
-        clearUserTokenAndDeauthenticate(res)
-    }
-})
-
-router.get('/user/logout', (req, res) => {
-    clearUserTokenAndDeauthenticate(res)
-})
-
-router.get('/userBooks/:id', (req, res) => {
-    User.findOne({ "googleId": req.params.id })
-        .then(user => res.json(user))
-        .catch(console.error)
-})
 
 router.post('/user/login', async (req, res) => {
     const { token } = req.body
@@ -78,6 +44,33 @@ router.post('/user/login', async (req, res) => {
         //     : 'localhost'
     });
     res.json({ user })
+})
+
+router.get('/user/me', async (req, res) => {
+    const { token } = req.cookies
+    if (token) {
+        try {
+            const ticket = await client.verifyIdToken({
+                idToken: token,
+                audience: process.env.CLIENT_ID
+            });
+
+            const payload = ticket.getPayload()
+
+            let user = await User.findOne({ googleId: payload?.sub })
+                .populate('ratings')
+                .populate('wishlist')
+            res.json({ authenticated: true, user })
+        } catch (err) {
+            clearUserTokenAndDeauthenticate(res)
+        }
+    } else {
+        clearUserTokenAndDeauthenticate(res)
+    }
+})
+
+router.get('/user/logout', (req, res) => {
+    clearUserTokenAndDeauthenticate(res)
 })
 
 router.put('/user/updateList/', async (req, res) => {
