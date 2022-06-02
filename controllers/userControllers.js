@@ -24,6 +24,7 @@ router.post('/user/login', async (req, res) => {
     const payload = ticket.getPayload()
 
     let user = await User.findOne({ googleId: payload?.sub })
+        .populate('wishlist')
     if (!user) {
         user = await new User({
             name: payload?.name,
@@ -100,6 +101,8 @@ router.put('/user/updateList/', async (req, res) => {
     if (list !== 'notRead') {
         await User.findByIdAndUpdate(userId, { $push: query })
     }
+
+    res.send('updated')
 })
 
 module.exports = router
