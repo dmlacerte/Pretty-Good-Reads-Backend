@@ -49,6 +49,15 @@ router.put('/:userId/:bookId/:starRating', (req, res) => {
     .catch(console.error)
 })
 
+router.put('/:userId/:bookId', (req, res) => {
+    Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, 
+        { comment: req.body.comment },
+        { new: true }
+    )
+    .then(rating => res.send(rating))
+    .catch(console.error)
+})
+
 router.delete('/:userId/:bookId', (req, res) => {
     Rating.findOneAndDelete({user: req.params.userId, book: req.params.bookId})
     .then(rating => res.send(rating))

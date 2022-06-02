@@ -4,9 +4,13 @@ const express = require('express')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const app = express()
+const methodOverride = require('method-override')
+const bodyParser = require('body-parser')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+// app.use(express.bodyParser())
+app.use(methodOverride('_method'))
 app.use(cors({
     origin : process.env.NODE_ENV === 'production'
     ? process.env.REACT_APP_FRONT_END_PROD
