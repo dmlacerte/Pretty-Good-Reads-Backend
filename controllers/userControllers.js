@@ -6,11 +6,12 @@ const client = new OAuth2Client(process.env.CLIENT_ID)
 
 const User = require('../models/user-model')
 
+/* HTTP COOKIE AUTH ONLY */
 //Helper function to log out a user and remove browser cookie
-const clearUserTokenAndDeauthenticate = (res) => {
-    res.clearCookie("token")
-    res.json({ authenticated: false, user: null })
-}
+// const clearUserTokenAndDeauthenticate = (res) => {
+//     res.clearCookie("token")
+//     res.json({ authenticated: false, user: null })
+// }
 
 //Authenticate and create new users, and set a browser cookie
 router.post('/user/login', async (req, res) => {
@@ -37,20 +38,24 @@ router.post('/user/login', async (req, res) => {
         await user.save()
     }
 
-    res.cookie("token", token, {
-        httpOnly: true,
-        secure: true,
-        sameSite:'none'
-        // domain: process.env.NODE_ENV === 'production'
-        //     ? 'pretty-good-reads.netlify.app'
-        //     : 'localhost'
-    });
-    res.json({ user })
+    /* HTTP COOKIE AUTH ONLY */
+    // res.cookie("token", token, {
+    //     httpOnly: true,
+    //     secure: true,
+    //     sameSite:'none',
+    //     domain: process.env.NODE_ENV === 'production'
+    //         ? 'pretty-good-reads.netlify.app'
+    //         : 'localhost'
+    // });
+
+    res.json({ user, token });
 })
 
 //Set a user as authenticated if the browser passes back a cookie
 router.get('/user/me', async (req, res) => {
-    const { token } = req.cookies
+    /* Below for HTTP cookie authentication method only */
+    // const { token } = req.cookies
+    const { token } = req.headers
     if (token) {
         try {
             const ticket = await client.verifyIdToken({
@@ -65,11 +70,15 @@ router.get('/user/me', async (req, res) => {
                 .populate('wishlist')
             res.json({ authenticated: true, user })
         } catch (err) {
-            clearUserTokenAndDeauthenticate(res)
+            console.log(err);
+            /* HTTP COOKIE AUTH ONLY */
+            // clearUserTokenAndDeauthenticate(res)
         }
-    } else {
-        clearUserTokenAndDeauthenticate(res)
-    }
+    } 
+    /* HTTP COOKIE AUTH ONLY */
+    // else {
+    //     clearUserTokenAndDeauthenticate(res)
+    // }
 })
 
 //Log a user out
