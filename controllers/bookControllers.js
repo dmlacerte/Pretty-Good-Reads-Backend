@@ -6,7 +6,7 @@ const Book = require('../models/book-model')
 const User = require('../models/user-model')
 
 
-//GET books associated with an individual user account
+//Get books associated with an individual user account
 router.get("/user/:userId", async (req, res) => {
     const user = await User.findOne({"googleId" : req.params.userId});
 
@@ -21,6 +21,7 @@ router.get("/user/:userId", async (req, res) => {
     });
 })
 
+//Get book details
 router.get('/:id', (req, res) => {
     Book.find({id: req.params.id})
     .then(book => {
@@ -32,24 +33,19 @@ router.get('/:id', (req, res) => {
     .catch(console.error)
 })
 
+//Add new book
 router.post('/post', (req, res) => {
     Book.create(req.body)
     .then(book => res.json(book))
     .catch(console.error)
 })
 
-router.put('/:id', (req, res) => {
-    Book.findOneAndUpdate({id: req.params.id}, {
-        $push: {ratings: req.body.rating}
-    })
-    .then(book => res.json(book))
-    .catch(console.error)
-})
-
-router.delete('/:id', (req, res) => {
-    Book.findOneAndDelete({id: req.params.id})
-    .then(book => res.json(book))
-    .catch(console.error)
-})
+// router.put('/:id', (req, res) => {
+//     Book.findOneAndUpdate({id: req.params.id}, {
+//         $push: {ratings: req.body.rating}
+//     })
+//     .then(book => res.json(book))
+//     .catch(console.error)
+// })
 
 module.exports = router

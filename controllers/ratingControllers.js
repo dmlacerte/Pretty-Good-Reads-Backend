@@ -32,8 +32,6 @@ router.post('/:userId/:bookId/:starRating', (req, res) => {
         score: parseInt(req.params.starRating)
     })
     .then(async (rating) => {
-        console.log(`adding to book and user`)
-        console.log(rating)
         await User.findByIdAndUpdate(req.params.userId, {$push: {ratings: rating._id}})
         await Book.findByIdAndUpdate(req.params.bookId, {$push: {ratings: rating._id}})
     })
@@ -41,8 +39,8 @@ router.post('/:userId/:bookId/:starRating', (req, res) => {
     .catch(console.error)
 })
 
+//Update user book comment
 router.put('/:userId/:bookId', (req, res) => {
-    console.log(req.body)
     Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, 
         { comment: req.body.comment },
         { new: true }
@@ -51,6 +49,7 @@ router.put('/:userId/:bookId', (req, res) => {
     .catch(console.error)
 })
 
+//Update user book review
 router.put('/:userId/:bookId/:starRating', (req, res) => {
     Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, {
         score: parseInt(req.params.starRating)
@@ -59,6 +58,7 @@ router.put('/:userId/:bookId/:starRating', (req, res) => {
     .catch(console.error)
 })
 
+//Delete user book review
 router.delete('/:userId/:bookId', (req, res) => {
     Rating.findOneAndDelete({user: req.params.userId, book: req.params.bookId})
     .then(rating => res.send(rating))

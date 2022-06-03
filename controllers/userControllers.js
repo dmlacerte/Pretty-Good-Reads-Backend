@@ -13,7 +13,8 @@ const User = require('../models/user-model')
 //     res.json({ authenticated: false, user: null })
 // }
 
-//Authenticate and create new users, and set a browser cookie
+//Authenticate and create new users, and set a browser cookie 
+//(or send back token for local storage)
 router.post('/user/login', async (req, res) => {
     const { token } = req.body
     const ticket = await client.verifyIdToken({
@@ -53,9 +54,11 @@ router.post('/user/login', async (req, res) => {
 })
 
 //Set a user as authenticated if the browser passes back a cookie
+//(or browser passes set token from local storage)
 router.get('/user/me', async (req, res) => {
-    /* Below for HTTP cookie authentication method only */
+    /* HTTP COOKIE AUTH ONLY */
     // const { token } = req.cookies
+    /* LOCAL STORAGE AUTH ONLY */
     const { token } = req.headers
     if (token) {
         try {
@@ -94,7 +97,6 @@ router.put('/user/updateList/', async (req, res) => {
 
     let query = {}
     query[list] = bookId
-    console.log(query)
 
     await User.findByIdAndUpdate(userId, { $pull: { wishlist: bookId, reading: bookId, finished: bookId, } })
 
