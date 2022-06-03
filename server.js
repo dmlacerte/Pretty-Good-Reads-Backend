@@ -38,7 +38,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'))
 
 
 app.get('/', (req, res) => {
-    res.send('<h1>we in</h1>')
+    res.send('<h1>Backend Running</h1>')
 })
 
 const port = process.env.PORT || 4000
