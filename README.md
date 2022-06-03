@@ -18,6 +18,9 @@ Frontend GitHub: https://github.com/dmlacerte/pretty-good-reads-frontend
 - Incorporates the 3rd party Google Books API to populate book searches and book model details.
 - Uses Google oAuth 2.0 to authenticate users and set browser cookies for user authentication management. 
 
+**Unsolved Problems**<br />
+Due to cross-domain restrictions and chosen deployment applications (Netlify and Heroku) being on the public-suffix list, we were unable to deploy our original authentication method. We originally set HTTP cookies to maintain user authentication sessions, but due to domain restrictions were unable to set cookies and switched to local storage user session validation. Please see commented code within the frontend and backend files for evidence of HTTP cookie authorization method, which can be tested using localhost.
+
 **Installation Instructions**<br />
 1. Fork and clone down this repository.
 2. Install required packages using `npm i`.
