@@ -41,6 +41,16 @@ router.post('/:userId/:bookId/:starRating', (req, res) => {
     .catch(console.error)
 })
 
+router.put('/:userId/:bookId', (req, res) => {
+    console.log(req.body)
+    Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, 
+        { comment: req.body.comment },
+        { new: true }
+    )
+    .then(rating => res.send(rating))
+    .catch(console.error)
+})
+
 router.put('/:userId/:bookId/:starRating', (req, res) => {
     Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, {
         score: parseInt(req.params.starRating)
