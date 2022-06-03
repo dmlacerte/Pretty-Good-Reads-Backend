@@ -4,7 +4,7 @@
 The backend of a semi-clone of Good Reads, where you can search for books and record books you're currently reading, want to read, or have read. You can also rate books you've already read, and view ratings from other users.
 
 **Link to Deployed API**<br />
-Live version deployed to Heroku at *ADD FINAL LINK*
+[Live version deployed to Heroku](https://pretty-good-reads-dlacerte-pz.herokuapp.com)
 
 **Technologies Used**<br />
 Express.js, Node.js, MongoDB, Mongoose, Google oAuth 2.0, Google Books API
