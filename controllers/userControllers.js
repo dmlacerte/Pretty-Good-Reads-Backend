@@ -53,7 +53,7 @@ router.post('/user/login', async (req, res) => {
     res.json({ user, token });
 })
 
-//Set a user as authenticated if the browser passes back a cookie
+//Set a user as authenticated if the browser passes a cookie
 //(or browser passes set token from local storage)
 router.get('/user/me', async (req, res) => {
     /* HTTP COOKIE AUTH ONLY */
@@ -90,6 +90,7 @@ router.get('/user/logout', (req, res) => {
     clearUserTokenAndDeauthenticate(res)
 })
 
+//Update user reading lists
 router.put('/user/updateList/', async (req, res) => {
     const list = req.body.list
     const userId = req.body.userId

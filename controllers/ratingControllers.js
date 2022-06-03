@@ -5,7 +5,7 @@ const Rating = require('../models/rating-model')
 const User = require('../models/user-model')
 const Book = require('../models/book-model')
 
-
+//Get ratings by book
 router.get('/book/:id', (req, res) => {
     Rating.find({book: req.params.id})
     .populate('user')
@@ -13,18 +13,14 @@ router.get('/book/:id', (req, res) => {
     .catch(console.error)
 })
 
-router.get('/user/:id', (req, res) => {
-    Rating.find({user: req.params.id})
-    .then(ratings => res.send(ratings))
-    .catch(console.error)
-})
-
+//Get rating by book and user
 router.get('/:userId/:bookId', (req, res) => {
     Rating.findOne({user: req.params.userId, book: req.params.bookId})
     .then(rating => res.json(rating))
     .catch(console.error)
 })
 
+//Create user & book rating
 router.post('/:userId/:bookId/:starRating', (req, res) => {
     Rating.create({
         user: req.params.userId,
@@ -49,7 +45,7 @@ router.put('/:userId/:bookId', (req, res) => {
     .catch(console.error)
 })
 
-//Update user book review
+//Update user book rating
 router.put('/:userId/:bookId/:starRating', (req, res) => {
     Rating.findOneAndUpdate({user: req.params.userId, book: req.params.bookId}, {
         score: parseInt(req.params.starRating)
