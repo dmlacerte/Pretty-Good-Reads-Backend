@@ -4,14 +4,14 @@
 The backend of a semi-clone of Good Reads, where you can search for books and record books you're currently reading, want to read, or have read. You can also rate books you've already read, and view ratings from other users.
 
 **Link to Deployed API**<br />
-Live version deployed to Heroku at https://pretty-good-reads-dlacerte-pz.herokuapp.com
+Live version deployed to Heroku at:<br /> https://pretty-good-reads-dlacerte-pz.herokuapp.com
 
 **Technologies Used**<br />
 Express.js, Node.js, MongoDB, Mongoose, Google oAuth 2.0, Google Books API
 
 **Link to Frontend Application**<br />
-Frontend Live Application: https://pretty-good-reads.netlify.app<br />
-Frontend GitHub: https://github.com/dmlacerte/pretty-good-reads-frontend
+Frontend Live Application:<br /> https://pretty-good-reads.netlify.app<br />
+Frontend GitHub:<br /> https://github.com/dmlacerte/pretty-good-reads-frontend
 
 **Key Features**<br />
 - An API that serves JSON data of application users, books, user lists of books, and user ratings. 
